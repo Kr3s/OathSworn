@@ -1,7 +1,7 @@
 # OathSworn
 Discord Server Invite Page.
 
-# [Discord Invite Link](https://discord.com/invite/DX5fTATRfY)
+## [Discord Invite Link](https://discord.com/invite/DX5fTATRfY)
 
 Socials
 - [x.com](https://x.com/Kr3s3)
