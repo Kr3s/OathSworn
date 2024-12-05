@@ -9,19 +9,106 @@ body {
     color:#ffffff;
     background-color: #1d1f1e;
 }
+
+.container h1 {
+    text-shadow: #000000 0px 5px 5px;
+}
+
 .container {
     flex-direction:column;
 }
 
-button {
+.join {
+    position: relative;
     background-color: #4CAF50;
+    outline: none;
+    border-radius: 20%;
+    box-shadow: #000000 0px 10px 5px;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 42px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    animation-name: opening;
+    animation-duration: 4s;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.avatar {
+    opacity: 0%;
+    display: flex;
+    position: fixed;
+    width: 20%;
+    height: auto;
+    bottom: 20px;
+}
+
+.github {
+    opacity: 0%;
+    position: fixed;
+    display: flex;
+    position: fixed;
+    width: 15%;
+    height: auto;
+    bottom: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*///////////// Animations /////////////*/
+
+/* Hover */
+
+.join:hover {
+    translate: 0px -5px;
+    box-shadow: #000000 0px 15px 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+body:has(.Kr3s:hover) .avatar, body:has(.github-logo:hover) .github {
+    animation: fadein 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes */
+
+@keyframes opening {
+    from { 
+        opacity: 0%;
+        box-shadow: #000000 0px 0px 5px;
+        bottom: -50px;
+    }
+    to   { 
+        opacity: 100%; 
+        bottom: 0px;
+    }
+}
+
+@keyframes fadein {
+    from { 
+        opacity: 0%;
+    }
+    to   { 
+        opacity: 100%;
+    }
 }
